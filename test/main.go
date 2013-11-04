@@ -16,8 +16,8 @@ func main() {
 			Widget: wtf.TextInput,
 		},
 	}
-	fmt.Printf("%#v", MyForm)
-
+	form := MyForm.Bind()
+	fmt.Printf("%#v\n\n%#v", MyForm, form)
 }
 
 func chain(args ...wtf.Validator) []wtf.Validator {
